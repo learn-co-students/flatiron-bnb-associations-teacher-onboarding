@@ -20,14 +20,14 @@ ActiveRecord::Schema.define(version: 6) do
     t.string  "address"
     t.string  "listing_type"
     t.string  "title"
-    t.string  "description"
-    t.float   "price"
+    t.text    "description"
+    t.decimal "price"
     t.integer "neighborhood_id"
     t.integer "host_id"
   end
 
   create_table "neighborhoods", force: :cascade do |t|
-    t.string  "address"
+    t.string  "name"
     t.integer "city_id"
   end
 
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 6) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string  "description"
+    t.text    "description"
     t.integer "rating"
     t.integer "guest_id"
     t.integer "reservation_id"
