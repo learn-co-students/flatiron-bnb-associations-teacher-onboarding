@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 6) do
   end
 
   create_table "neighborhoods", force: :cascade do |t|
-    t.string  "address"
+    t.string  "name"
     t.integer "city_id"
   end
 
